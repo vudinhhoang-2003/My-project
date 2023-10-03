@@ -4,14 +4,23 @@
 table, th, td {
   border:1px solid black;
 }
+th, td {
+  padding: 15px;
+}
+table {
+  border-spacing: 30px;
+}
 </style>
 <body>
 <h1>VŨ ĐÌNH HOÀNG - 2121050409</h1>
 <h2>A basic HTML table</h2>
 
 <table style="width:100%">
+  <colgroup>
+    <col span="3" style="background-color:lightgreen;">
+  </colgroup>
   <tr>
-    <th>Company</th>
+    <th style="width:50%" colspan="2">Company</th>
     <th>Contact</th>
     <th>Country</th>
   </tr>

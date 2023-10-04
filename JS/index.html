@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="counter.js"></script>
-    <title>VŨ ĐÌNH HOÀNG - 2121050409</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('#form').onsubmit = sum;
+      });
+      function sum() {
+        const a = parseInt(document.querySelector('#a').value);
+        const b = parseInt(document.querySelector('#b').value);
+        const tong = a+b;
+        alert(`a + b = ${tong}`);
+        }
+
+    </script>
+    <title>Tính tổng</title>
   </head>
   <body>
-    <h1 id="counter">0</h1>
-    <button onclick="count()">Click Here!</button>
+    <form id="form">
+      Nhập số a:<input type="number" id="a"  autofocus placeholder="a"><br/>
+      Nhập số b:<input type="number" id="b"  autofocus placeholder="b"><br/>
+      <input type="submit"  value="Tính tổng">
+    </form>
   </body>
 </html>

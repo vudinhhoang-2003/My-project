@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('#form').onsubmit = Login;
+      });
+      function Login() {
+        const hoten = document.querySelector('#hoten').value;
+        const tendn = document.querySelector('#tendn').value;
+        const password = document.querySelector('#password').value;
+        const nlpassword = document.querySelector('#nlpassword').value;
+        const quoctich = document.querySelector('#quoctich').value;
+        const email = document.querySelector('#email').value;
+        const sdt = document.querySelector('#sdt').value;
+        const cauhoi = document.querySelector('#cauhoi').value;
+        const traloi = document.querySelector('#traloi').value;
+
+
+        if (password !== nlpassword) {
+          alert(`Nhập lại mkhau`);
+          return False;
+        }
+      }
+
+    </script>
+    <title>Đăng ký</title>
+  </head>
+  <body>
+    <form id="form">
+      Họ tên(*)<input type="text" id="hoten"><br/>
+      Tên đăng nhập(*)<input type="text" id="tendn" ><br/>
+      Password(*)<input type="password" id="password"><br/>
+      Nhập lại password(*)<input type="password" id="nlpassword"><br/>
+      Quốc tịch(*)<select class="" name="">
+        <option value="">Việt Nam</option>
+        <option value="">Mỹ</option>
+      </select><br/>
+      Email(*)<input type="text" id="email"><br/>
+      Số điện thoại(*)<input type="text" id="sdt"><br>
+      Câu hỏi bí mật(*)<select class="" name="" >
+        <option value="">Bạn đến từ đâu?</option>
+        <option value="">Tên mẹ bạn?</option>
+        <option value="">Cấp 1 bạn học trường nào?</option>
+      </select><br/>
+      <input type="submit"  value="Kiểm tra">
+      <input type="submit"  value="Đăng ký">
+    </form>
+  </body>
+</html>

@@ -2,6 +2,12 @@
 <html>
   <head>
     <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        document.querySelector('button').onclick = count;
+      });
+
+      let counter = 0;
+
       function count() {
         counter++;
         document.querySelector('#counter').innerHTML = counter;
@@ -14,7 +20,7 @@
     <title>VŨ ĐÌNH HOÀNG - 2121050409</title>
   </head>
   <body>
-    <h1 id="counter">20</h1>
+    <h1 id="counter">0</h1>
     <button onclick="count()">Click Here!</button>
   </body>
 </html>

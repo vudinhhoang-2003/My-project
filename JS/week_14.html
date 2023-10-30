@@ -3,14 +3,21 @@
   <head>
     <script>
       document.addventListener('DOMContentLoaded', function(){
-        document.querySelector('#new-task').onsubmit = function(){
-          // Create new item for list
+        // By default, submit button is disable
+        document.querySelector('#submit').disable = true{
+          // Enable button only if there is text in the input fieldset
+          document.querySelector('#task').onkeyup = function(){
+            document.querySelector('#submit').disable = false;
+          };
+          document.querySelector('#new-task').onsubmit = function(){
+            // Create new item for list
           const li = document.createElement('li');
-          li.innerHTML = document.querySelector(#task).value;
+          li.innerHTML = document.querySelector('#task').value;
           // Add new item to task list
           document.querySelector('#tasks').append(li);
           // Clear input field
           document.querySelector('#task').value = '';
+          document.querySelector('#submit').disable = false;
           // Stop form from submitting
           return false;
         };
@@ -23,8 +30,8 @@
     <ul id="tasks">
     </ul>
     <form id="new-task">
-      <input type="text" id="task" autofocus placeholder="New Task">
-      <input type="submit">
+      <input type="text" id="task" autocomplete="off" autofocus placeholder="New Task">
+      <input id="submit"type="submit">
     </form>
   </body>
 </html>

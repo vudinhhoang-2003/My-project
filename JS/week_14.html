@@ -7,7 +7,10 @@
         document.querySelector('#submit').disable = true{
           // Enable button only if there is text in the input fieldset
           document.querySelector('#task').onkeyup = function(){
-            document.querySelector('#submit').disable = false;
+            if (document.querySelector('#task').value.length > 8)
+                document.querySelector('#submit').disable = false;
+            else
+                document.querySelector('#submit').disable = true;
           };
           document.querySelector('#new-task').onsubmit = function(){
             // Create new item for list
@@ -17,7 +20,7 @@
           document.querySelector('#tasks').append(li);
           // Clear input field
           document.querySelector('#task').value = '';
-          document.querySelector('#submit').disable = false;
+          document.querySelector('#submit').disable = true;
           // Stop form from submitting
           return false;
         };

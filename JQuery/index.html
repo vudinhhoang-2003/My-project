@@ -4,21 +4,27 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("button").click(function(){
-    $("#test").hide();
+  $("p").dblclick(function(){ //Nhấp đúp chuột
+    $(this).hide();
+  });
+
+  $("#p1").mouseenter(function(){ //Hàm được thực thi khi con trỏ chuột nhập vào phần tử HTML
+    alert("You entered p1!");
+  });
+
+  $("#p2").mouseleave(function(){ //Hàm được thực thi khi con trỏ chuột rời khỏi phần tử HTML
+    alert("Bye! You now leave p2!");
   });
 });
 </script>
-<title>VŨ ĐÌNH HOÀNG - 2121050409</title>
 </head>
 <body>
 
-<h2>This is a heading</h2>
+<p>If you double-click on me, I will disappear.</p>
+<p>Click me away!</p>
 
-<p>This is a paragraph.</p>
-<p id="test">This is another paragraph.</p>
+<i id="p1">Enter this paragraph.</i>
 
-<button>Click me</button>
-
+<h4 id="p2">This is a paragraph.</h4>
 </body>
 </html>

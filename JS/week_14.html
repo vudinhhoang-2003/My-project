@@ -2,18 +2,56 @@
 <html>
   <head>
     <script>
-      document.addEventListener('DOMContentLoaded', function(){
-        setInterval(count, 1000);
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('#form').onsubmit = function(event) {
+          event.preventDefault(); //preventDefault() giúp kiểm tra dữ liệu trước khi gửi biểu mẫu
+          checkForm();
+        };
       });
-      let counter = 0;
-      function count() {
-        counter++;
-        document.querySelector('#counter').innerHTML = counter;
+
+      function checkForm() {
+        const tendn = document.querySelector('#tendn').value;
+        const p = document.querySelector('#p').value;
+        const nlp = document.querySelector('#nlp').value;
+        const email = document.querySelector('#email').value;
+
+
+        document.getElementById('error').innerHTML = '';
+
+        if (tendn.length < 8) {
+          displayError('Tên đăng nhập phải có ít nhất 8 ký tự');
+          return;
+        }
+
+        if (p !== nlp) {
+          displayError('Mật khẩu và nhập lại mật khẩu không trùng khớp');
+          return;
+        }
+
+        if (email.indexOf('@') === -1) {
+          displayError('Email phải chứa ký tự "@"');
+          return;
+        }
+
+
+        alert('Đăng ký thành công!');
+      }
+
+      function displayError(message) {
+        const errorDiv = document.getElementById('error');
+        errorDiv.innerHTML = message;
       }
     </script>
-    <title>VŨ ĐÌNH HOÀNG - 2121050409</title>
+    <title>Vũ Đình Hoàng - 2121050409</title>
   </head>
   <body>
-    <h1 id="counter">0</h1>
+    <form id="form">
+      <div id="error" style="color: red;"></div>
+      Tên đăng nhập(*)<input type="text" id="tendn"><br/>
+      Password(*)<input type="password" id="p"><br/>
+      Nhập lại password(*)<input type="password" id="nlp"><br/>
+      Email(*)<input type="text" id="email"><br/>
+      <input type="submit" value="Đăng ký">
+    </form>
   </body>
 </html>

@@ -1,11 +1,10 @@
 <?php
-$Subject = 'Lập trình ứng dụng web';
-$universityName = 'HUMG';
-$firstNumber = 2;
-$secondtNumber = 2;
+  $firstNumber = 79;
+  $secondNumber = 80;
 
-echo "Học ".$Subject. "ở phòng 502 tại trường" . $universityName."<br>";
-echo "Học $Subject ở phòng 502 tại trường $universityName <br>";
-echo "<h1> $universityName </h1>";
-echo $firstNumber + $secondtNumber;
+  if ($firstNumber > $secondNumber) {
+    echo "Số lớn nhất là: $firstNumber";
+  } else {
+    echo "Số lớn nhất là: $secondNumber";
+  }
 ?>

@@ -3,14 +3,8 @@
 
 
 <?php
-  $a = 5;
-  $b = 3;
+  $input_string = 'Chúng tôi là sinh viên trường đại học mỏ địa chất';
+  $count = substr_count($input_string, 'h');
 
-  if ($a == $b) {
-    echo "Tứ giác là hình vuông";
-  }
-  else {
-    echo "Tứ giác là hình chữ nhật";
-  }
-
+  echo "Số lần xuất hiện của chữ 'h' trong chuỗi là: $count";
 ?>

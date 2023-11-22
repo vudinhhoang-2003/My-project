@@ -6,27 +6,27 @@
   </head>
   <body>
     <?php
-    $USD = 22300;
-    $EUR = 27300;
-    $SGD = 17000;
-    $JPY = 120;
+    $USD = 2300;
+    $AUD = 17000;
+    $JPY = 200;
+    $EUR = 27000;
     $amount = $_GET['amount'];
     $currency = $_GET['currency'];
-    echo "$amount USD is equal ";
+    echo "$amount $currency is equal ";
     switch ($currency) {
       case 'USD':
         echo $amount * $USD;
         // code...
         break;
-      case 'EUR':
+      case 'AUD':
         echo $amount * $EUR;
           // code...
         break;
-      case 'SGD':
+      case 'JPY':
         echo $amount * $SGD;
             // code...
         break;
-      case 'JPY':
+      case 'EUR':
         echo $amount * $JPY;
               // code...
         break;

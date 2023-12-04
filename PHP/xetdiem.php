@@ -2,10 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Vũ Đình Hoàng - 2121050409</title>
   </head>
   <body>
     <?php
+      function calculateMean($scores) {
+        $sum = array_sum($scores);
+        $count = count($scores);
+
+        if ($count > 0) {
+          return $sum / $count;
+        } else {
+          return 0;
+          }
+        }
+
         $Toan = $_GET['diemtoan'];
         $Ly = $_GET['diemly'];
         $Hoa = $_GET['diemhoa'];
@@ -13,7 +24,9 @@
         $Van = $_GET['diemvan'];
         $Su = $_GET['diemsu'];
 
-        $Mean = ($Toan + $Ly + $Hoa + $Anh + $Van + $Su)/6;
+        $scores = [$Toan, $Ly, $Hoa, $Anh, $Van, $Su];
+
+        $Mean = calculateMean($scores);
 
         echo "Kết quả:";
 

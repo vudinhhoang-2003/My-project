@@ -1,4 +1,5 @@
 <?php
+    // Vũ Đình Hoàng - 2121050409
     // connect to the database
     require 'connect.php';
     // connect sql to insert data

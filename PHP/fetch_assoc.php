@@ -14,6 +14,9 @@
     $row = $result->fetch_assoc();
     echo "<br>";
     print_r($row);
+    $row = $result->fetch_assoc();
+    echo "<br>";
+    print_r($row);
     // close the connection
     $conn->close();
 ?>

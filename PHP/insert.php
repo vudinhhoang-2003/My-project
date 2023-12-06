@@ -1,9 +1,14 @@
 <?php
     // Vũ Đình Hoàng - 2121050409
+
+    $Origin = $_GET['Origin'];
+    $Destination = $_GET['Destination'];
+    $Duration = $_GET['Duration'];
     // connect to the database
     require 'connect.php';
+    mysqli_set_charset($conn, 'UTF8');
     // connect sql to insert data
-    $sql = "INSERT INTO flights (Origin, Destination, Duration) VALUES ('Hà Nội', 'Đà Nẵng', '1000')";
+    $sql = "INSERT INTO flights SET Origin = '$Origin', Destination = '$Destination', Duration = $Duration";
     // run the sql query
     if ($conn->query($sql) === TRUE)
     { // mo if 1

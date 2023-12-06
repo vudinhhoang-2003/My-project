@@ -8,7 +8,7 @@
     require 'connect.php';
     mysqli_set_charset($conn, 'UTF8');
     // connect sql to insert data
-    $sql = "INSERT INTO flights SET Origin = '$Origin', Destination = '$Destination', Duration = $Duration";
+    $sql = "INSERT INTO flights SET origin = '$Origin', destination = '$Destination', duration = $Duration";
     // run the sql query
     if ($conn->query($sql) === TRUE)
     { // mo if 1
